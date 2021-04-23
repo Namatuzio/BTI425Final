@@ -1,0 +1,19 @@
+
+    <h2>Login Form</h2>
+  
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+          <label class="control-label" for="name">User:</label>
+          <br>
+          <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="user.userName" autofocus>
+          <br>
+          <label class="control-label" for="name">Password:</label>
+          <br>
+          <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password">
+          <br>
+        <div class="alert alert-danger" *ngIf="warning">
+          {{warning}}
+        </div>
+  
+        <button class="btn btn-primary pull-right" type="submit">Login</button>
+      </form>
