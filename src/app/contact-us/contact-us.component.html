@@ -5,15 +5,15 @@
 
         <label class="control-label" for="name">User:</label>
         <br>
-        <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="name">
+        <input type="text" class="form-control" id="userName" name="userName" [(ngModel)]="this.name" required>
         <br>
         <label class="control-label" for="name">Email:</label>
         <br>
-        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="this.email" required>
         <br>
         <label class="control-label" for="name">Message:</label>
         <br>
-        <input type="message" class="form-control" id="message" name="message" [(ngModel)]="message">
+        <input type="message" class="form-control" id="message" name="message" [(ngModel)]="this.message" required>
         <br>
         <div class="alert alert-danger" *ngIf="warning">
         {{warning}}
